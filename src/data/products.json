@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "name": "T-Shirt Classic",
+    "price": 19.99,
+    "category": "Clothing",
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=300&h=300&fit=crop"
+  },
+  {
+    "id": 2,
+    "name": "Slim Fit Jeans",
+    "price": 49.99,
+    "category": "Clothing",
+    "image": "https://images.unsplash.com/photo-1542272604-787c3835535d?w=300&h=300&fit=crop"
+  },
+  {
+    "id": 3,
+    "name": "Hooded Sweatshirt",
+    "price": 34.99,
+    "category": "Clothing",
+    "image": "https://images.unsplash.com/photo-1556821840-3a63f15732ce?w=300&h=300&fit=crop"
+  },
+  {
+    "id": 4,
+    "name": "Running Sneakers",
+    "price": 79.99,
+    "category": "Shoes",
+    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300&h=300&fit=crop"
+  },
+  {
+    "id": 5,
+    "name": "Leather Boots",
+    "price": 109.99,
+    "category": "Shoes",
+    "image": "https://images.unsplash.com/photo-1608256246200-53e635b5b65f?w=300&h=300&fit=crop"
+  },
+  {
+    "id": 6,
+    "name": "Canvas Loafers",
+    "price": 44.99,
+    "category": "Shoes",
+    "image": "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=300&h=300&fit=crop"
+  },
+  {
+    "id": 7,
+    "name": "Leather Handbag",
+    "price": 89.99,
+    "category": "Accessories",
+    "image": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=300&h=300&fit=crop"
+  },
+  {
+    "id": 8,
+    "name": "Sunglasses UV400",
+    "price": 24.99,
+    "category": "Accessories",
+    "image": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=300&h=300&fit=crop"
+  },
+  {
+    "id": 9,
+    "name": "Leather Belt",
+    "price": 19.99,
+    "category": "Accessories",
+    "image": "https://images.unsplash.com/photo-1624222247344-550fb60583dc?w=300&h=300&fit=crop"
+  },
+  {
+    "id": 10,
+    "name": "Wireless Headphones",
+    "price": 59.99,
+    "category": "Electronics",
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300&h=300&fit=crop"
+  },
+  {
+    "id": 11,
+    "name": "Smart Watch",
+    "price": 129.99,
+    "category": "Electronics",
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300&h=300&fit=crop"
+  },
+  {
+    "id": 12,
+    "name": "Portable Charger",
+    "price": 29.99,
+    "category": "Electronics",
+    "image": "https://images.unsplash.com/photo-1609592175697-793f1f3b8e79?w=300&h=300&fit=crop"
+  }
+]

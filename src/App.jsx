@@ -14,6 +14,16 @@ const App = () => {
 
   const categories = ["All", ...new Set(products.map((p) => p.category))];
 
+  // إضافة منتج للسلة
+  const addToCart = (product) => {
+    setCart([...cart, product]);
+  };
+
+  // حذف منتج من الكتالوج
+  const removeFromCatalog = (productId) => {
+    setProducts(products.filter((p) => p.id !== productId));
+  };
+
   return (
     <div>
       <Header cartCount={cart.length} />
@@ -24,7 +34,13 @@ const App = () => {
         onSelectCategory={setSelectedCategory}
       />
 
-      <ProductList products={products} />
+      <ProductList
+        products={products}
+        selectedCategory={selectedCategory}
+        onAddToCart={addToCart}
+        onRemoveFromCatalog={removeFromCatalog}
+      />
+
       <Cart />
       <Footer />
     </div>

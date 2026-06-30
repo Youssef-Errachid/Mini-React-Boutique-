@@ -1,9 +1,25 @@
-import React from 'react'
+import React from "react";
+import "../../styles/CategoryFilter.css";
+import "../../styles/Global.css";
 
-const CategoryFilter = () => {
+const CategoryFilter = ({ categories, selectedCategory, onSelectCategory }) => {
   return (
-    <div>CategoryFilter</div>
-  )
-}
+    <div className="category-filter">
+      {categories.map((category) => (
+        <button
+          key={category}
+          className={
+            selectedCategory === category
+              ? "category-btn active"
+              : "category-btn"
+          }
+          onClick={() => onSelectCategory(category)}
+        >
+          {category}
+        </button>
+      ))}
+    </div>
+  );
+};
 
-export default CategoryFilter
+export default CategoryFilter;

@@ -14,14 +14,16 @@ const App = () => {
 
   const categories = ["All", ...new Set(products.map((p) => p.category))];
 
-  // إضافة منتج للسلة
   const addToCart = (product) => {
     setCart([...cart, product]);
   };
 
-  // حذف منتج من الكتالوج
   const removeFromCatalog = (productId) => {
     setProducts(products.filter((p) => p.id !== productId));
+  };
+
+  const removeFromCart = (productId) => {
+    setCart(cart.filter((item) => item.id !== productId));
   };
 
   return (
@@ -41,7 +43,7 @@ const App = () => {
         onRemoveFromCatalog={removeFromCatalog}
       />
 
-      <Cart />
+      <Cart cart={cart} onRemoveFromCart={removeFromCart} />
       <Footer />
     </div>
   );

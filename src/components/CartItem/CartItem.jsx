@@ -1,9 +1,24 @@
-import React from 'react'
+import React from "react";
+import "../../styles/CartItem.css";
 
-const CartItem = () => {
+const CartItem = ({ item, onRemoveFromCart }) => {
   return (
-    <div>CartItem</div>
-  )
-}
+    <div className="cart-item">
+      <img src={item.image} alt={item.name} className="cart-item-image" />
 
-export default CartItem
+      <div className="cart-item-info">
+        <p className="cart-item-name">{item.name}</p>
+        <p className="cart-item-price">{item.price} €</p>
+      </div>
+
+      <button
+        className="btn-remove-cart"
+        onClick={() => onRemoveFromCart(item.id)}
+      >
+        ✕
+      </button>
+    </div>
+  );
+};
+
+export default CartItem;

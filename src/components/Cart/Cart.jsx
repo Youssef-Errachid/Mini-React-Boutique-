@@ -1,16 +1,21 @@
 import React from "react";
-import "../../styles/Cart.css";
 import CartItem from "../CartItem/CartItem";
+import "../../styles/Cart.css";
 
-const Cart = ({ cart, onRemoveFromCart }) => {
-  const totalAmount = cart.reduce((sum, item) => sum + item.price, 0);
+const Cart = ({ cart, removeFromCart, showCart, setShowCart }) => {
+  const total = cart.reduce((sum, item) => sum + item.price, 0);
 
   return (
-    <div className="cart">
-      <h2>🛒 Your Cart</h2>
+    <div className={`cart-sidebar ${showCart ? "open" : ""}`}>
+      <div className="cart-header">
+        <h2>🛒 Mon Panier</h2>
+        <button className="btn-close-cart" onClick={() => setShowCart(false)}>
+          ✕
+        </button>
+      </div>
 
       {cart.length === 0 ? (
-        <p className="empty-cart">Your cart is empty</p>
+        <p className="empty-cart">Votre panier est vide</p>
       ) : (
         <>
           <div className="cart-items">
@@ -18,17 +23,17 @@ const Cart = ({ cart, onRemoveFromCart }) => {
               <CartItem
                 key={index}
                 item={item}
-                onRemoveFromCart={onRemoveFromCart}
+                onRemoveFromCart={removeFromCart}
               />
             ))}
           </div>
 
           <div className="cart-summary">
             <p>
-              Total items: <strong>{cart.length}</strong>
+              Total Articles: <strong>{cart.length}</strong>
             </p>
             <p>
-              Total amount: <strong>{totalAmount.toFixed(2)} €</strong>
+              Total: <strong>{total.toFixed(2)} DH</strong>
             </p>
           </div>
         </>

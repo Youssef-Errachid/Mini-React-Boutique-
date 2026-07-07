@@ -11,6 +11,7 @@ const App = () => {
   const [products, setProducts] = useState(productsData);
   const [cart, setCart] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const [showCart, setShowCart] = useState(false);
 
   const categories = ["All", ...new Set(products.map((p) => p.category))];
 
@@ -18,17 +19,17 @@ const App = () => {
     setCart([...cart, product]);
   };
 
-  const removeFromCatalog = (productId) => {
-    setProducts(products.filter((p) => p.id !== productId));
-  };
-
   const removeFromCart = (productId) => {
     setCart(cart.filter((item) => item.id !== productId));
   };
 
+  const removeFromCatalog = (productId) => {
+    setProducts(products.filter((p) => p.id !== productId));
+  };
+
   return (
     <div>
-      <Header cartCount={cart.length} />
+      <Header cartCount={cart.length} onCartClick={() => setShowCart(true)} />
 
       <CategoryFilter
         categories={categories}
@@ -43,7 +44,17 @@ const App = () => {
         onRemoveFromCatalog={removeFromCatalog}
       />
 
-      <Cart cart={cart} onRemoveFromCart={removeFromCart} />
+      {showCart && (
+        <div className="overlay" onClick={() => setShowCart(false)} />
+      )}
+
+      <Cart
+        cart={cart}
+        removeFromCart={removeFromCart}
+        showCart={showCart}
+        setShowCart={setShowCart}
+      />
+
       <Footer />
     </div>
   );

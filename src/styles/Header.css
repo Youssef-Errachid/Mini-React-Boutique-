@@ -58,7 +58,6 @@
   padding: 0 4px;
 }
 
-/* Responsive - mobile */
 @media (max-width: 600px) {
   .navbar {
     padding: 1rem;
@@ -71,4 +70,29 @@
   .cart-icon span:not(.cart-count) {
     display: none;
   }
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--text);
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.nav-link:hover {
+  background-color: var(--card-bg);
+}
+
+.nav-link.active {
+  background-color: var(--primary);
+  color: white;
 }

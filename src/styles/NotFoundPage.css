@@ -1,0 +1,36 @@
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  gap: 1rem;
+  text-align: center;
+}
+
+.not-found-code {
+  font-size: 6rem;
+  font-weight: bold;
+  color: var(--primary);
+  margin: 0;
+}
+
+.not-found-message {
+  font-size: 1.2rem;
+  color: var(--text);
+}
+
+.not-found-btn {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.not-found-btn:hover {
+  opacity: 0.85;
+}

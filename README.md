@@ -1,4 +1,4 @@
-# Mini React Boutique
+# React Mini Boutique
 
 A React-based mini shop application developed in two stages — starting with core React fundamentals and evolving into a fully routed, form-validated application.
 
